@@ -7,22 +7,25 @@ import java.awt.event.*;
 
 public class StartPage {
 	public StartPage() {
+		//Basic settings
 		JFrame window = new JFrame("Connections");
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setSize(400,350);
 		window.setLocationRelativeTo(null);
 		window.setLayout(null);
 		
+		//Settings for panel with the instructions
 		JPanel instructionPanel = new JPanel();
 		instructionPanel.setBounds(25,5,350,200);
 		instructionPanel.setLayout(new GridLayout(1,1));
 		JLabel instructions = new JLabel("<html><div style='text-align: center'>"
 				+ "Create four sets of four Connections between the following words based on english, general knowledge, and the lore of Web multiverse. <br>---<br>"
 				+ "Difficulty colors proceed as usual (yellow, green, blue, purple), but exceptionally challenging categories that require out of the box thinking"
-				+ "or hidden Web lore may be marked with red squares instead of purple.</div></html>");
+				+ "or hidden Web lore may be marked with red squares instead of purple.<br>---<br>[Web Connections is a Certified Nolan Idea]</div></html>");
 		instructionPanel.add(instructions);
 		window.add(instructionPanel);
 		
+		//Settings for panel with buttons on it
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setBounds(70,220,250,30);
 		buttonPanel.setLayout(new GridLayout(1,3));

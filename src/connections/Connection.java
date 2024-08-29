@@ -4,11 +4,15 @@ public class Connection {
 	private String[][] groups;
 	private String[] groupNames;
 	
+	//TODO: Figure out how to denote colors that need printing
+	
+	//Constructor
 	public Connection(String[][] groups, String[] groupNames) {
 		this.groups = groups;
 		this.groupNames = groupNames;
 	}
 	
+	//Check a guess
 	public String guess(String[] guess) {
 		String answer = "";
 		for  (String i : guess) {
@@ -25,17 +29,22 @@ public class Connection {
 				if (caught) break; //don't keep going if we already know the group
 			}
 		}
-		return answer;
+		//Returns a string of all numbers, each number being the index of the group one of the guesses was in
+		//If it all matches, it's a correct guess. If it doesn't, sort and print the colors
+		return answer; 
 	}
 	
+	//return the members of a group
 	public String[] getGroup(int group) {
 		return this.groups[group];
 	}
 	
+	//return the name of a group
 	public String getGroupName(int group) {
 		return this.groupNames[group];
 	}
 	
+	//TODO: Export Connection as string to be saved in file
 	public void export() {
 		
 	}

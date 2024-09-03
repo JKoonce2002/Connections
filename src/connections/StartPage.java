@@ -27,7 +27,7 @@ public class StartPage {
 		
 		//Settings for panel with buttons on it
 		JPanel buttonPanel = new JPanel();
-		buttonPanel.setBounds(70,220,250,30);
+		buttonPanel.setBounds(70,250,250,30);
 		buttonPanel.setLayout(new GridLayout(1,3));
 		JButton playButton = new JButton("Play");
 		buttonPanel.add(playButton);
@@ -58,6 +58,7 @@ public class StartPage {
 		
 		//Add ActionListener to buttons
 		playButton.addActionListener(act);
+		createButton.addActionListener(act);
 		
 		window.setVisible(true);
 	}

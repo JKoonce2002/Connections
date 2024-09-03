@@ -84,6 +84,8 @@ public class Connection {
 			writer.write(this.groupNames[3]);
 			writer.newLine();
 			writer.write(this.groups[3][0]+"/"+this.groups[3][1]+"/"+this.groups[3][2]+"/"+this.groups[3][3]);
+			writer.newLine();
+			writer.write(this.difficulty);
 			
 			//Finish writing
 			writer.close();
